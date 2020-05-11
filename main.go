@@ -1,30 +1,44 @@
 package main
 
-import (
-	"code/golang_workshop/packages/bye"
-	"code/golang_workshop/packages/hello"
-	"log"
-	"net/http"
-
-	"github.com/julienschmidt/httprouter"
-	"github.com/rs/cors"
-)
+import "fmt"
 
 func main() {
+	fmt.Printf("Test \n")
 
-	router := httprouter.New()
+	// Variables
+	var num int
+	var float float32
+	var str string
+	var boolean bool
 
-	router.GET("/hello", hello.SayHello)
-	router.POST("/bye", bye.SayBye)
+	fmt.Printf("%v \n", num)
+	fmt.Printf("%v \n", float)
+	fmt.Printf("%v \n", str)
+	fmt.Printf("%v \n", boolean)
 
-	log.Println("Starting api...")
+	// Short hand variable declaration
+	standard := "Hello world"
+	fmt.Printf("%s\n", standard)
 
-	handler := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:3000", ""},
-		AllowedMethods:   []string{"POST", "GET", "OPTIONS", "PUT", "DELETE"},
-		AllowedHeaders:   []string{"Accept", "Content-Type", "Content-Length", "Accept-Encoding", "X-CSRF-Token", "Authorization"},
-		AllowCredentials: true,
-	}).Handler(router)
+	// Looping - while loop
+	count := 0
+	for {
+		if count == 10 {
+			fmt.Print("Exit")
+			break
+		}
+		count++
+	}
 
-	http.ListenAndServe(":8080", handler)
+	// Looping - for loop
+	for i := 0; i < 10; i++ {
+		fmt.Printf("%v\n", i)
+	}
+
+	arr := []int{10, 20, 30, 40, 50, 60}
+	// Looping - arrays
+	for index, val := range arr {
+		fmt.Printf("%v\n%v\n", index, val)
+	}
+
 }
