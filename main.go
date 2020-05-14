@@ -7,6 +7,8 @@ import (
 // Every go program needs a main package with a main function.
 // This works as the applications entry point.
 
+// Standard library documentation: https://golang.org/pkg/
+
 // Useful packages:
 // strings - https://golang.org/pkg/strings/
 // http - https://golang.org/pkg/net/http/
