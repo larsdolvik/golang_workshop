@@ -1,0 +1,6 @@
+# github.com/julienschmidt/httprouter v1.3.0
+## explicit
+github.com/julienschmidt/httprouter
+# github.com/rs/cors v1.7.0
+## explicit
+github.com/rs/cors
