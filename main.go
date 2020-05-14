@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"modules/packages/challenge"
 	"modules/packages/hello"
 	"net/http"
 
@@ -33,7 +32,6 @@ func main() {
 	// Set up your different API routes
 	router.GET("/helloworld", hello.Hello)
 	router.GET("/hello/:name", hello.SayHello)
-	router.GET("/solution", challenge.Solution)
 	// The GetData func must med assigned a route here
 
 	// Example of an easy cors setup
