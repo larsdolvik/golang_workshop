@@ -2,6 +2,7 @@ package main
 
 import (
 	"code/golang_workshop/examples"
+	"fmt"
 )
 
 // Every go program needs a main package with a main function.
@@ -14,8 +15,9 @@ import (
 // sort - https://golang.org/pkg/sort/
 // http - https://golang.org/pkg/net/http/
 
-// Useful examples:
+// Useful tools:
 // https://gobyexample.com/
+// https://transform.tools/json-to-go
 
 func main() {
 	// todo, err := examples.ShortHandRequest()
@@ -29,5 +31,12 @@ func main() {
 	// fmt.Printf("title: %v\n", todo.Title)
 	// fmt.Printf("id: %v\n", todo.ID)
 
-	examples.Loop()
+	examples.PointerExample()
+
+	ints := []int{1, 2, 3, 4}
+	examples.AddOne(&ints, 5)
+
+	for _, val := range ints {
+		fmt.Printf("%d\n", val)
+	}
 }

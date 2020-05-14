@@ -33,7 +33,7 @@ func ShortHandRequest() (Todo, error) {
 	return result, nil
 }
 
-// ToJSON takes a target interface and a http response and unmarshals the response to JSON
+// convertToStruct takes a target interface and a http response and unmarshals the response to JSON
 func convertToStruct(target interface{}, response *http.Response) error {
 	jsonBytes, err := ioutil.ReadAll(response.Body)
 	if err != nil {
