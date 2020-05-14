@@ -20,10 +20,16 @@ package challenge
 
 	4. Create func that can covert this response to a struct.append
 	This func should take a type/interface and the response
+
+		4a: 
 	
 	
 	Tips:
 	- Remembmer to define the return types of your functions
 	- Remember errohandling and defer
+
+	Bonus:
+		go routines
+		pointers
 
 */

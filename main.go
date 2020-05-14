@@ -1,18 +1,15 @@
 package main
 
 import (
-<<<<<<< HEAD
 	"log"
 	"modules/packages/hello"
 	"net/http"
-=======
 	"code/golang_workshop/examples"
 	"fmt"
 )
 
 // Every go program needs a main package with a main function.
 // This works as the applications entry point.
->>>>>>> language-features
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/rs/cors"
@@ -20,14 +17,11 @@ import (
 
 func main() {
 
-<<<<<<< HEAD
 	// Initate new router
 	router := httprouter.New()
-=======
-// Useful tools:
-// https://gobyexample.com/
-// https://transform.tools/json-to-go
->>>>>>> language-features
+	// Useful tools:
+	// https://gobyexample.com/
+	// https://transform.tools/json-to-go
 
 	// Set up your different API routes
 	router.GET("/helloworld", hello.Hello)
@@ -42,10 +36,10 @@ func main() {
 		AllowCredentials: true,
 	}).Handler(router)
 
-<<<<<<< HEAD
 	log.Println("Starting api...")
 	http.ListenAndServe(":8080", handler)
-=======
+
+
 	examples.PointerExample()
 
 	ints := []int{1, 2, 3, 4}
@@ -54,5 +48,4 @@ func main() {
 	for _, val := range ints {
 		fmt.Printf("%d\n", val)
 	}
->>>>>>> language-features
 }
