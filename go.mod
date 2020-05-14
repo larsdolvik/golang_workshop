@@ -1,4 +1,4 @@
-module code/golang_workshop
+module modules
 
 go 1.14
 

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"code/golang_workshop/packages/bye"
-	"code/golang_workshop/packages/hello"
 	"log"
+	"modules/packages/bye"
+	"modules/packages/hello"
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
