@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"modules/packages/bye"
 	"modules/packages/hello"
 	"net/http"
 
@@ -12,13 +11,15 @@ import (
 
 func main() {
 
+	// Initate new router
 	router := httprouter.New()
 
-	router.GET("/hello", hello.SayHello)
-	router.POST("/bye", bye.SayBye)
+	// Set up your different API routes
+	router.GET("/helloworld", hello.Hello)
+	router.GET("/hello/:name", hello.SayHello)
+	// The GetData func must med assigned a route here
 
-	log.Println("Starting api...")
-
+	// Example of an easy cors setup
 	handler := cors.New(cors.Options{
 		AllowedOrigins:   []string{"http://localhost:3000", ""},
 		AllowedMethods:   []string{"POST", "GET", "OPTIONS", "PUT", "DELETE"},
@@ -26,5 +27,6 @@ func main() {
 		AllowCredentials: true,
 	}).Handler(router)
 
+	log.Println("Starting api...")
 	http.ListenAndServe(":8080", handler)
 }
