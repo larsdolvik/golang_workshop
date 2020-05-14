@@ -10,10 +10,11 @@ import (
 )
 
 type Post struct {
-	UserID    int    `json:"userId"`
-	ID        int    `json:"id"`
-	Title     string `json:"title"`
-	Completed bool   `json:"completed"`
+	PostID int    `json:"postId"`
+	ID     int    `json:"id"`
+	Name   string `json:"name"`
+	Email  string `json:"email"`
+	Body   string `json:"body"`
 }
 
 // Solution fetches comments from the jsonplaceholder api and returns it to the user
