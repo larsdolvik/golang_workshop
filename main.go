@@ -1,44 +1,33 @@
 package main
 
-import "fmt"
+import (
+	"code/golang_workshop/examples"
+)
+
+// Every go program needs a main package with a main function.
+// This works as the applications entry point.
+
+// Standard library documentation: https://golang.org/pkg/
+
+// Useful packages:
+// strings - https://golang.org/pkg/strings/
+// sort - https://golang.org/pkg/sort/
+// http - https://golang.org/pkg/net/http/
+
+// Useful examples:
+// https://gobyexample.com/
 
 func main() {
-	fmt.Printf("Test \n")
+	// todo, err := examples.ShortHandRequest()
+	// if err != nil {
+	// 	fmt.Print(err)
+	// 	return
+	// }
 
-	// Variables
-	var num int
-	var float float32
-	var str string
-	var boolean bool
+	// fmt.Printf("userId: %v\n", todo.UserID)
+	// fmt.Printf("completed: %v\n", todo.Completed)
+	// fmt.Printf("title: %v\n", todo.Title)
+	// fmt.Printf("id: %v\n", todo.ID)
 
-	fmt.Printf("%v \n", num)
-	fmt.Printf("%v \n", float)
-	fmt.Printf("%v \n", str)
-	fmt.Printf("%v \n", boolean)
-
-	// Short hand variable declaration
-	standard := "Hello world"
-	fmt.Printf("%s\n", standard)
-
-	// Looping - while loop
-	count := 0
-	for {
-		if count == 10 {
-			fmt.Print("Exit")
-			break
-		}
-		count++
-	}
-
-	// Looping - for loop
-	for i := 0; i < 10; i++ {
-		fmt.Printf("%v\n", i)
-	}
-
-	arr := []int{10, 20, 30, 40, 50, 60}
-	// Looping - arrays
-	for index, val := range arr {
-		fmt.Printf("%v\n%v\n", index, val)
-	}
-
+	examples.Loop()
 }
